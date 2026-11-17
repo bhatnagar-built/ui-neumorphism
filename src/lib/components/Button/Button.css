@@ -1,0 +1,155 @@
+.nm-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: inherit;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+  background-color: var(--nm-bg);
+  color: var(--nm-text);
+  transition: var(--nm-transition);
+  position: relative;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+/* Sizes */
+.nm-btn-sm {
+  font-size: 0.8125rem;
+  padding: 8px 14px;
+  border-radius: var(--nm-radius-sm);
+}
+
+.nm-btn-md {
+  font-size: 0.9375rem;
+  padding: 11px 20px;
+  border-radius: var(--nm-radius-md);
+}
+
+.nm-btn-lg {
+  font-size: 1.0625rem;
+  padding: 14px 28px;
+  border-radius: var(--nm-radius-lg);
+}
+
+/* Shapes */
+.nm-btn-pill {
+  border-radius: var(--nm-radius-full) !important;
+}
+
+.nm-btn-circle {
+  border-radius: var(--nm-radius-full) !important;
+  padding: 0 !important;
+  aspect-ratio: 1 / 1;
+}
+
+.nm-btn-circle.nm-btn-sm {
+  width: 36px;
+  height: 36px;
+}
+
+.nm-btn-circle.nm-btn-md {
+  width: 44px;
+  height: 44px;
+}
+
+.nm-btn-circle.nm-btn-lg {
+  width: 52px;
+  height: 52px;
+}
+
+/* Variants */
+.nm-btn-flat {
+  box-shadow: 
+    var(--nm-shadow-distance) var(--nm-shadow-distance) var(--nm-shadow-blur) var(--nm-shadow-dark),
+    calc(-1 * var(--nm-shadow-distance)) calc(-1 * var(--nm-shadow-distance)) var(--nm-shadow-blur) var(--nm-shadow-light);
+}
+
+.nm-btn-raised {
+  box-shadow: 
+    calc(var(--nm-shadow-distance) * 1.5) calc(var(--nm-shadow-distance) * 1.5) calc(var(--nm-shadow-blur) * 1.4) var(--nm-shadow-dark),
+    calc(-1.5 * var(--nm-shadow-distance)) calc(-1.5 * var(--nm-shadow-distance)) calc(var(--nm-shadow-blur) * 1.4) var(--nm-shadow-light);
+}
+
+.nm-btn-inset {
+  box-shadow: 
+    inset calc(var(--nm-shadow-distance) * 0.75) calc(var(--nm-shadow-distance) * 0.75) calc(var(--nm-shadow-blur) * 0.6) var(--nm-inset-shadow-dark),
+    inset calc(-0.75 * var(--nm-shadow-distance)) calc(-0.75 * var(--nm-shadow-distance)) calc(var(--nm-shadow-blur) * 0.6) var(--nm-inset-shadow-light);
+}
+
+.nm-btn-convex {
+  background: linear-gradient(145deg, var(--nm-bg-gradient-start), var(--nm-bg-gradient-end));
+  box-shadow: 
+    var(--nm-shadow-distance) var(--nm-shadow-distance) var(--nm-shadow-blur) var(--nm-shadow-dark),
+    calc(-1 * var(--nm-shadow-distance)) calc(-1 * var(--nm-shadow-distance)) var(--nm-shadow-blur) var(--nm-shadow-light);
+}
+
+.nm-btn-concave {
+  background: linear-gradient(145deg, var(--nm-bg-gradient-end), var(--nm-bg-gradient-start));
+  box-shadow: 
+    var(--nm-shadow-distance) var(--nm-shadow-distance) var(--nm-shadow-blur) var(--nm-shadow-dark),
+    calc(-1 * var(--nm-shadow-distance)) calc(-1 * var(--nm-shadow-distance)) var(--nm-shadow-blur) var(--nm-shadow-light);
+}
+
+/* Tactile Active / Press feedback */
+.nm-btn:not(:disabled):hover {
+  transform: translateY(-1px);
+}
+
+.nm-btn:not(:disabled):active,
+.nm-btn-active {
+  box-shadow: 
+    inset calc(var(--nm-shadow-distance) * 0.75) calc(var(--nm-shadow-distance) * 0.75) calc(var(--nm-shadow-blur) * 0.6) var(--nm-inset-shadow-dark),
+    inset calc(-0.75 * var(--nm-shadow-distance)) calc(-0.75 * var(--nm-shadow-distance)) calc(var(--nm-shadow-blur) * 0.6) var(--nm-inset-shadow-light) !important;
+  transform: translateY(0) !important;
+}
+
+/* Colors */
+.nm-btn-primary {
+  color: var(--nm-primary);
+}
+
+.nm-btn-primary.nm-btn-active,
+.nm-btn-primary:active {
+  color: var(--nm-primary-hover);
+}
+
+.nm-btn-success {
+  color: var(--nm-success);
+}
+
+.nm-btn-warning {
+  color: var(--nm-warning);
+}
+
+.nm-btn-danger {
+  color: var(--nm-danger);
+}
+
+/* Disabled */
+.nm-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  box-shadow: none !important;
+  background-color: var(--nm-bg);
+}
+
+/* Spinner */
+.nm-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: nm-spin 0.75s linear infinite;
+}
+
+@keyframes nm-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

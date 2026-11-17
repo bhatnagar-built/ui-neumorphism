@@ -1,0 +1,109 @@
+:root {
+  /* Light Theme Neumorphic Palette */
+  --nm-bg: #e2e8f0;
+  --nm-bg-surface: #e2e8f0;
+  --nm-bg-gradient-start: #f2f8ff;
+  --nm-bg-gradient-end: #cbcfd8;
+  --nm-text: #334155;
+  --nm-text-muted: #64748b;
+  --nm-border: rgba(255, 255, 255, 0.4);
+
+  /* Shadows (Light) */
+  --nm-shadow-distance: 6px;
+  --nm-shadow-blur: 14px;
+  --nm-shadow-dark: rgba(163, 177, 198, 0.65);
+  --nm-shadow-light: rgba(255, 255, 255, 0.85);
+
+  --nm-inset-shadow-dark: rgba(163, 177, 198, 0.7);
+  --nm-inset-shadow-light: rgba(255, 255, 255, 0.9);
+
+  /* Accents */
+  --nm-primary: #3b82f6;
+  --nm-primary-hover: #2563eb;
+  --nm-primary-text: #ffffff;
+  --nm-primary-shadow: rgba(59, 130, 246, 0.4);
+
+  --nm-success: #10b981;
+  --nm-warning: #f59e0b;
+  --nm-danger: #ef4444;
+  --nm-info: #06b6d4;
+
+  /* Global radii */
+  --nm-radius-sm: 8px;
+  --nm-radius-md: 14px;
+  --nm-radius-lg: 20px;
+  --nm-radius-xl: 28px;
+  --nm-radius-full: 9999px;
+
+  /* Transitions */
+  --nm-transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme='dark'] {
+  /* Dark Theme Neumorphic Palette */
+  --nm-bg: #181d24;
+  --nm-bg-surface: #181d24;
+  --nm-bg-gradient-start: #1c222b;
+  --nm-bg-gradient-end: #14181e;
+  --nm-text: #e2e8f0;
+  --nm-text-muted: #94a3b8;
+  --nm-border: rgba(255, 255, 255, 0.05);
+
+  /* Shadows (Dark) */
+  --nm-shadow-dark: rgba(0, 0, 0, 0.75);
+  --nm-shadow-light: rgba(255, 255, 255, 0.05);
+
+  --nm-inset-shadow-dark: rgba(0, 0, 0, 0.85);
+  --nm-inset-shadow-light: rgba(255, 255, 255, 0.06);
+
+  /* Accents */
+  --nm-primary: #3b82f6;
+  --nm-primary-hover: #60a5fa;
+  --nm-primary-shadow: rgba(59, 130, 246, 0.3);
+}
+
+/* Base resets & classes */
+.nm-surface {
+  background-color: var(--nm-bg);
+  color: var(--nm-text);
+}
+
+/* Flat Elevation */
+.nm-flat {
+  background-color: var(--nm-bg);
+  box-shadow: 
+    var(--nm-shadow-distance) var(--nm-shadow-distance) var(--nm-shadow-blur) var(--nm-shadow-dark),
+    calc(-1 * var(--nm-shadow-distance)) calc(-1 * var(--nm-shadow-distance)) var(--nm-shadow-blur) var(--nm-shadow-light);
+}
+
+/* Raised Elevation */
+.nm-raised {
+  background-color: var(--nm-bg);
+  box-shadow: 
+    calc(var(--nm-shadow-distance) * 1.5) calc(var(--nm-shadow-distance) * 1.5) calc(var(--nm-shadow-blur) * 1.4) var(--nm-shadow-dark),
+    calc(-1.5 * var(--nm-shadow-distance)) calc(-1.5 * var(--nm-shadow-distance)) calc(var(--nm-shadow-blur) * 1.4) var(--nm-shadow-light);
+}
+
+/* Inset / Pressed Surface */
+.nm-inset {
+  background-color: var(--nm-bg);
+  box-shadow: 
+    inset calc(var(--nm-shadow-distance) * 0.75) calc(var(--nm-shadow-distance) * 0.75) calc(var(--nm-shadow-blur) * 0.6) var(--nm-inset-shadow-dark),
+    inset calc(-0.75 * var(--nm-shadow-distance)) calc(-0.75 * var(--nm-shadow-distance)) calc(var(--nm-shadow-blur) * 0.6) var(--nm-inset-shadow-light);
+}
+
+/* Convex Gradient */
+.nm-convex {
+  background: linear-gradient(145deg, var(--nm-bg-gradient-start), var(--nm-bg-gradient-end));
+  box-shadow: 
+    var(--nm-shadow-distance) var(--nm-shadow-distance) var(--nm-shadow-blur) var(--nm-shadow-dark),
+    calc(-1 * var(--nm-shadow-distance)) calc(-1 * var(--nm-shadow-distance)) var(--nm-shadow-blur) var(--nm-shadow-light);
+}
+
+/* Concave Gradient */
+.nm-concave {
+  background: linear-gradient(145deg, var(--nm-bg-gradient-end), var(--nm-bg-gradient-start));
+  box-shadow: 
+    var(--nm-shadow-distance) var(--nm-shadow-distance) var(--nm-shadow-blur) var(--nm-shadow-dark),
+    calc(-1 * var(--nm-shadow-distance)) calc(-1 * var(--nm-shadow-distance)) var(--nm-shadow-blur) var(--nm-shadow-light);
+}

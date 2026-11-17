@@ -1,0 +1,48 @@
+.nm-codeblock {
+  border-radius: var(--nm-radius-md);
+  background-color: var(--nm-bg);
+  box-shadow: 
+    inset calc(var(--nm-shadow-distance) * 0.7) calc(var(--nm-shadow-distance) * 0.7) calc(var(--nm-shadow-blur) * 0.6) var(--nm-inset-shadow-dark),
+    inset calc(-0.7 * var(--nm-shadow-distance)) calc(-0.7 * var(--nm-shadow-distance)) calc(var(--nm-shadow-blur) * 0.6) var(--nm-inset-shadow-light);
+  overflow: hidden;
+  margin-top: 16px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.nm-codeblock-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--nm-border);
+  font-size: 0.75rem;
+  color: var(--nm-text-muted);
+}
+
+.nm-codeblock-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--nm-text-muted);
+  font-family: inherit;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: var(--nm-radius-sm);
+  transition: var(--nm-transition);
+}
+
+.nm-codeblock-copy:hover {
+  color: var(--nm-text);
+}
+
+.nm-codeblock-content {
+  margin: 0;
+  padding: 16px;
+  overflow-x: auto;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--nm-text);
+}

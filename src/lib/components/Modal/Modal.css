@@ -1,0 +1,49 @@
+.nm-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+  animation: nm-fade-in 0.2s ease-out;
+}
+
+.nm-modal-container {
+  background-color: var(--nm-bg);
+  color: var(--nm-text);
+  border-radius: var(--nm-radius-xl);
+  max-width: 500px;
+  width: 100%;
+  padding: 28px;
+  position: relative;
+  box-shadow: 
+    calc(var(--nm-shadow-distance) * 2.5) calc(var(--nm-shadow-distance) * 2.5) calc(var(--nm-shadow-blur) * 2.5) var(--nm-shadow-dark),
+    calc(-2.5 * var(--nm-shadow-distance)) calc(-2.5 * var(--nm-shadow-distance)) calc(var(--nm-shadow-blur) * 2.5) var(--nm-shadow-light);
+  animation: nm-scale-up 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+.nm-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+}
+
+@keyframes nm-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes nm-scale-up {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}

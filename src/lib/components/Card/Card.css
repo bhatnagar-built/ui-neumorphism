@@ -1,0 +1,83 @@
+.nm-card {
+  background-color: var(--nm-bg);
+  color: var(--nm-text);
+  transition: var(--nm-transition);
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Radius */
+.nm-card-radius-sm { border-radius: var(--nm-radius-sm); }
+.nm-card-radius-md { border-radius: var(--nm-radius-md); }
+.nm-card-radius-lg { border-radius: var(--nm-radius-lg); }
+.nm-card-radius-xl { border-radius: var(--nm-radius-xl); }
+
+/* Padding */
+.nm-card-pad-none { padding: 0; }
+.nm-card-pad-sm { padding: 14px; }
+.nm-card-pad-md { padding: 22px; }
+.nm-card-pad-lg { padding: 32px; }
+
+/* Elevations */
+.nm-card-flat {
+  box-shadow: 
+    var(--nm-shadow-distance) var(--nm-shadow-distance) var(--nm-shadow-blur) var(--nm-shadow-dark),
+    calc(-1 * var(--nm-shadow-distance)) calc(-1 * var(--nm-shadow-distance)) var(--nm-shadow-blur) var(--nm-shadow-light);
+}
+
+.nm-card-raised {
+  box-shadow: 
+    calc(var(--nm-shadow-distance) * 1.5) calc(var(--nm-shadow-distance) * 1.5) calc(var(--nm-shadow-blur) * 1.4) var(--nm-shadow-dark),
+    calc(-1.5 * var(--nm-shadow-distance)) calc(-1.5 * var(--nm-shadow-distance)) calc(var(--nm-shadow-blur) * 1.4) var(--nm-shadow-light);
+}
+
+.nm-card-inset {
+  box-shadow: 
+    inset calc(var(--nm-shadow-distance) * 0.75) calc(var(--nm-shadow-distance) * 0.75) calc(var(--nm-shadow-blur) * 0.6) var(--nm-inset-shadow-dark),
+    inset calc(-0.75 * var(--nm-shadow-distance)) calc(-0.75 * var(--nm-shadow-distance)) calc(var(--nm-shadow-blur) * 0.6) var(--nm-inset-shadow-light);
+}
+
+.nm-card-convex {
+  background: linear-gradient(145deg, var(--nm-bg-gradient-start), var(--nm-bg-gradient-end));
+  box-shadow: 
+    var(--nm-shadow-distance) var(--nm-shadow-distance) var(--nm-shadow-blur) var(--nm-shadow-dark),
+    calc(-1 * var(--nm-shadow-distance)) calc(-1 * var(--nm-shadow-distance)) var(--nm-shadow-blur) var(--nm-shadow-light);
+}
+
+.nm-card-concave {
+  background: linear-gradient(145deg, var(--nm-bg-gradient-end), var(--nm-bg-gradient-start));
+  box-shadow: 
+    var(--nm-shadow-distance) var(--nm-shadow-distance) var(--nm-shadow-blur) var(--nm-shadow-dark),
+    calc(-1 * var(--nm-shadow-distance)) calc(-1 * var(--nm-shadow-distance)) var(--nm-shadow-blur) var(--nm-shadow-light);
+}
+
+.nm-card-interactive:hover {
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+.nm-card-header {
+  margin-bottom: 16px;
+}
+
+.nm-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--nm-text);
+}
+
+.nm-card-subtitle {
+  font-size: 0.875rem;
+  color: var(--nm-text-muted);
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+.nm-card-footer {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}

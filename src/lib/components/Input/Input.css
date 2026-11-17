@@ -1,0 +1,97 @@
+.nm-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.nm-input-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--nm-text);
+  margin-left: 4px;
+}
+
+.nm-input-container {
+  display: flex;
+  align-items: center;
+  background-color: var(--nm-bg);
+  border-radius: var(--nm-radius-md);
+  padding: 0 16px;
+  box-shadow: 
+    inset calc(var(--nm-shadow-distance) * 0.75) calc(var(--nm-shadow-distance) * 0.75) calc(var(--nm-shadow-blur) * 0.6) var(--nm-inset-shadow-dark),
+    inset calc(-0.75 * var(--nm-shadow-distance)) calc(-0.75 * var(--nm-shadow-distance)) calc(var(--nm-shadow-blur) * 0.6) var(--nm-inset-shadow-light);
+  transition: var(--nm-transition);
+  position: relative;
+}
+
+.nm-input-container.nm-input-focused {
+  box-shadow: 
+    inset calc(var(--nm-shadow-distance) * 0.8) calc(var(--nm-shadow-distance) * 0.8) calc(var(--nm-shadow-blur) * 0.7) var(--nm-inset-shadow-dark),
+    inset calc(-0.8 * var(--nm-shadow-distance)) calc(-0.8 * var(--nm-shadow-distance)) calc(var(--nm-shadow-blur) * 0.7) var(--nm-inset-shadow-light),
+    0 0 0 2px var(--nm-primary);
+}
+
+.nm-input-container.nm-input-error {
+  box-shadow: 
+    inset calc(var(--nm-shadow-distance) * 0.8) calc(var(--nm-shadow-distance) * 0.8) calc(var(--nm-shadow-blur) * 0.7) var(--nm-inset-shadow-dark),
+    inset calc(-0.8 * var(--nm-shadow-distance)) calc(-0.8 * var(--nm-shadow-distance)) calc(var(--nm-shadow-blur) * 0.7) var(--nm-inset-shadow-light),
+    0 0 0 2px var(--nm-danger);
+}
+
+.nm-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--nm-text);
+  font-family: inherit;
+  font-size: 0.9375rem;
+  padding: 12px 0;
+}
+
+.nm-input::placeholder {
+  color: var(--nm-text-muted);
+  opacity: 0.75;
+}
+
+.nm-input-icon {
+  display: flex;
+  align-items: center;
+  color: var(--nm-text-muted);
+}
+
+.nm-input-icon-left {
+  margin-right: 10px;
+}
+
+.nm-input-icon-right {
+  margin-left: 10px;
+}
+
+.nm-input-clear {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--nm-text-muted);
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: var(--nm-transition);
+}
+
+.nm-input-clear:hover {
+  color: var(--nm-text);
+}
+
+.nm-input-helper {
+  font-size: 0.8125rem;
+  color: var(--nm-text-muted);
+  margin-left: 4px;
+}
+
+.nm-input-helper-error {
+  color: var(--nm-danger);
+}

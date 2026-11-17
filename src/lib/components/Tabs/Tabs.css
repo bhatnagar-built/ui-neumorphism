@@ -1,0 +1,39 @@
+.nm-tabs-container {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--nm-bg);
+  border-radius: var(--nm-radius-full);
+  padding: 5px;
+  box-shadow: 
+    inset calc(var(--nm-shadow-distance) * 0.7) calc(var(--nm-shadow-distance) * 0.7) calc(var(--nm-shadow-blur) * 0.6) var(--nm-inset-shadow-dark),
+    inset calc(-0.7 * var(--nm-shadow-distance)) calc(-0.7 * var(--nm-shadow-distance)) calc(var(--nm-shadow-blur) * 0.6) var(--nm-inset-shadow-light);
+  gap: 4px;
+}
+
+.nm-tab-btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 8px 18px;
+  border-radius: var(--nm-radius-full);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--nm-text-muted);
+  transition: var(--nm-transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nm-tab-btn:hover {
+  color: var(--nm-text);
+}
+
+.nm-tab-active {
+  background-color: var(--nm-bg);
+  color: var(--nm-primary) !important;
+  box-shadow: 
+    calc(var(--nm-shadow-distance) * 0.7) calc(var(--nm-shadow-distance) * 0.7) calc(var(--nm-shadow-blur) * 0.7) var(--nm-shadow-dark),
+    calc(-0.7 * var(--nm-shadow-distance)) calc(-0.7 * var(--nm-shadow-distance)) calc(var(--nm-shadow-blur) * 0.7) var(--nm-shadow-light);
+}

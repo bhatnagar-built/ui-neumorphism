@@ -1,0 +1,42 @@
+.nm-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--nm-radius-full);
+  background-color: var(--nm-bg);
+  color: var(--nm-text);
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.nm-badge-flat {
+  box-shadow: 
+    calc(var(--nm-shadow-distance) * 0.5) calc(var(--nm-shadow-distance) * 0.5) calc(var(--nm-shadow-blur) * 0.5) var(--nm-shadow-dark),
+    calc(-0.5 * var(--nm-shadow-distance)) calc(-0.5 * var(--nm-shadow-distance)) calc(var(--nm-shadow-blur) * 0.5) var(--nm-shadow-light);
+}
+
+.nm-badge-inset {
+  box-shadow: 
+    inset calc(var(--nm-shadow-distance) * 0.5) calc(var(--nm-shadow-distance) * 0.5) calc(var(--nm-shadow-blur) * 0.5) var(--nm-inset-shadow-dark),
+    inset calc(-0.5 * var(--nm-shadow-distance)) calc(-0.5 * var(--nm-shadow-distance)) calc(var(--nm-shadow-blur) * 0.5) var(--nm-inset-shadow-light);
+}
+
+.nm-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.nm-badge-default .nm-badge-dot { background-color: var(--nm-text-muted); }
+.nm-badge-primary .nm-badge-dot { background-color: var(--nm-primary); box-shadow: 0 0 6px var(--nm-primary-shadow); }
+.nm-badge-success .nm-badge-dot { background-color: var(--nm-success); box-shadow: 0 0 6px rgba(16, 185, 129, 0.5); }
+.nm-badge-warning .nm-badge-dot { background-color: var(--nm-warning); box-shadow: 0 0 6px rgba(245, 158, 11, 0.5); }
+.nm-badge-danger .nm-badge-dot { background-color: var(--nm-danger); box-shadow: 0 0 6px rgba(239, 68, 68, 0.5); }
+
+.nm-badge-primary { color: var(--nm-primary); }
+.nm-badge-success { color: var(--nm-success); }
+.nm-badge-warning { color: var(--nm-warning); }
+.nm-badge-danger { color: var(--nm-danger); }

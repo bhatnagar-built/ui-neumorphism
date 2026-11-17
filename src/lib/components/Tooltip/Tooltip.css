@@ -1,0 +1,38 @@
+.nm-tooltip-wrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+.nm-tooltip-bubble {
+  position: absolute;
+  background-color: var(--nm-bg);
+  color: var(--nm-text);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: var(--nm-radius-sm);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 100;
+  box-shadow: 
+    calc(var(--nm-shadow-distance) * 0.8) calc(var(--nm-shadow-distance) * 0.8) calc(var(--nm-shadow-blur) * 0.8) var(--nm-shadow-dark),
+    calc(-0.8 * var(--nm-shadow-distance)) calc(-0.8 * var(--nm-shadow-distance)) calc(var(--nm-shadow-blur) * 0.8) var(--nm-shadow-light);
+  animation: nm-tooltip-pop 0.15s ease-out;
+}
+
+.nm-tooltip-top {
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nm-tooltip-bottom {
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes nm-tooltip-pop {
+  from { opacity: 0; transform: translateX(-50%) scale(0.9); }
+  to { opacity: 1; transform: translateX(-50%) scale(1); }
+}

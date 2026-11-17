@@ -1,0 +1,83 @@
+.nm-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: var(--nm-bg);
+  color: var(--nm-text);
+  transition: var(--nm-transition);
+  box-sizing: border-box;
+}
+
+.nm-icon-btn-sm {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--nm-radius-sm);
+}
+
+.nm-icon-btn-md {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--nm-radius-md);
+}
+
+.nm-icon-btn-lg {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--nm-radius-lg);
+}
+
+.nm-icon-btn-circle {
+  border-radius: var(--nm-radius-full) !important;
+}
+
+.nm-icon-btn-flat {
+  box-shadow: 
+    var(--nm-shadow-distance) var(--nm-shadow-distance) var(--nm-shadow-blur) var(--nm-shadow-dark),
+    calc(-1 * var(--nm-shadow-distance)) calc(-1 * var(--nm-shadow-distance)) var(--nm-shadow-blur) var(--nm-shadow-light);
+}
+
+.nm-icon-btn-raised {
+  box-shadow: 
+    calc(var(--nm-shadow-distance) * 1.5) calc(var(--nm-shadow-distance) * 1.5) calc(var(--nm-shadow-blur) * 1.4) var(--nm-shadow-dark),
+    calc(-1.5 * var(--nm-shadow-distance)) calc(-1.5 * var(--nm-shadow-distance)) calc(var(--nm-shadow-blur) * 1.4) var(--nm-shadow-light);
+}
+
+.nm-icon-btn-inset {
+  box-shadow: 
+    inset calc(var(--nm-shadow-distance) * 0.75) calc(var(--nm-shadow-distance) * 0.75) calc(var(--nm-shadow-blur) * 0.6) var(--nm-inset-shadow-dark),
+    inset calc(-0.75 * var(--nm-shadow-distance)) calc(-0.75 * var(--nm-shadow-distance)) calc(var(--nm-shadow-blur) * 0.6) var(--nm-inset-shadow-light);
+}
+
+.nm-icon-btn:not(:disabled):hover {
+  transform: translateY(-1px);
+}
+
+.nm-icon-btn:not(:disabled):active,
+.nm-icon-btn-active {
+  box-shadow: 
+    inset calc(var(--nm-shadow-distance) * 0.75) calc(var(--nm-shadow-distance) * 0.75) calc(var(--nm-shadow-blur) * 0.6) var(--nm-inset-shadow-dark),
+    inset calc(-0.75 * var(--nm-shadow-distance)) calc(-0.75 * var(--nm-shadow-distance)) calc(var(--nm-shadow-blur) * 0.6) var(--nm-inset-shadow-light) !important;
+  transform: translateY(0) !important;
+}
+
+.nm-icon-btn-primary {
+  color: var(--nm-primary);
+}
+.nm-icon-btn-success {
+  color: var(--nm-success);
+}
+.nm-icon-btn-warning {
+  color: var(--nm-warning);
+}
+.nm-icon-btn-danger {
+  color: var(--nm-danger);
+}
+
+.nm-icon-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none !important;
+}

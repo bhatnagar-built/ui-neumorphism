@@ -1,0 +1,76 @@
+.nm-switch-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.nm-switch-wrapper.nm-switch-disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.nm-switch-track {
+  position: relative;
+  border-radius: var(--nm-radius-full);
+  background-color: var(--nm-bg);
+  box-shadow: 
+    inset calc(var(--nm-shadow-distance) * 0.7) calc(var(--nm-shadow-distance) * 0.7) calc(var(--nm-shadow-blur) * 0.6) var(--nm-inset-shadow-dark),
+    inset calc(-0.7 * var(--nm-shadow-distance)) calc(-0.7 * var(--nm-shadow-distance)) calc(var(--nm-shadow-blur) * 0.6) var(--nm-inset-shadow-light);
+  transition: var(--nm-transition);
+  display: flex;
+  align-items: center;
+}
+
+.nm-switch-sm {
+  width: 44px;
+  height: 24px;
+  padding: 3px;
+}
+
+.nm-switch-md {
+  width: 56px;
+  height: 30px;
+  padding: 4px;
+}
+
+.nm-switch-lg {
+  width: 70px;
+  height: 36px;
+  padding: 4px;
+}
+
+.nm-switch-thumb {
+  border-radius: 50%;
+  background-color: var(--nm-bg);
+  box-shadow: 
+    calc(var(--nm-shadow-distance) * 0.6) calc(var(--nm-shadow-distance) * 0.6) calc(var(--nm-shadow-blur) * 0.7) var(--nm-shadow-dark),
+    calc(-0.6 * var(--nm-shadow-distance)) calc(-0.6 * var(--nm-shadow-distance)) calc(var(--nm-shadow-blur) * 0.7) var(--nm-shadow-light);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.25s ease;
+  aspect-ratio: 1 / 1;
+  height: 100%;
+}
+
+.nm-switch-checked .nm-switch-thumb {
+  background-color: var(--nm-primary);
+  box-shadow: 0 0 12px var(--nm-primary-shadow);
+}
+
+.nm-switch-sm.nm-switch-checked .nm-switch-thumb {
+  transform: translateX(20px);
+}
+
+.nm-switch-md.nm-switch-checked .nm-switch-thumb {
+  transform: translateX(26px);
+}
+
+.nm-switch-lg.nm-switch-checked .nm-switch-thumb {
+  transform: translateX(34px);
+}
+
+.nm-switch-label {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--nm-text);
+}
