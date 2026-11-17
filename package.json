@@ -1,9 +1,14 @@
 {
-  "name": "neumorphic-ui-react",
+  "name": "ui-neumorphism",
   "version": "1.0.0",
   "description": "🎨 Modern, lightweight, and accessible Neumorphic (Soft UI) component library for React and TypeScript.",
   "author": "Abhishek Bhatnagar <abhi.bhatnagar2593@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bhatnagar-built/ui-neumorphism.git"
+  },
+  "homepage": "https://bhatnagar-built.github.io/ui-neumorphism/",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
   "types": "./dist/index.d.ts",

@@ -8,7 +8,7 @@
 [![React](https://img.shields.io/badge/React-18%20%7C%2019-61dafb.svg)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue.svg)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-6.x-646cff.svg)](https://vitejs.dev/)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/abhidp/neumorphic-ui/pulls)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bhatnagar-built/ui-neumorphism/pulls)
 
 [Live Interactive Showcase](#-interactive-showcase) • [Installation](#-installation) • [Quick Start](#-quick-start) • [Components](#-components) • [Theming](#-theming--customization)
 
@@ -209,8 +209,8 @@ Clone the repository and run the local development server:
 
 ```bash
 # Clone repository
-git clone https://github.com/abhidp/neumorphic-ui.git
-cd neumorphic-ui
+git clone https://github.com/bhatnagar-built/ui-neumorphism.git
+cd ui-neumorphism
 
 # Install dependencies
 npm install
@@ -236,6 +236,7 @@ This project is licensed under the [MIT License](LICENSE) — authored by **Abhi
 <div align="center">
 
 Crafted with ❤️ by **Abhishek Bhatnagar**  
-[GitHub Profile](https://github.com/abhidp) • [LinkedIn](https://linkedin.com)
+[GitHub Profile](https://github.com/bhatnagar-built) • [LinkedIn](https://www.linkedin.com/in/abhishek-bhatnagar-44022b131/)
 
 </div>
+

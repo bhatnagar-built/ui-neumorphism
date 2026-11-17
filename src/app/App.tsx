@@ -97,7 +97,7 @@ const ShowcaseContent = () => {
             icon={<Github size={20} />}
             variant="flat"
             shape="circle"
-            onClick={() => window.open('https://github.com/abhidp/neumorphic-ui', '_blank')}
+            onClick={() => window.open('https://github.com/bhatnagar-built/ui-neumorphism', '_blank')}
             aria-label="GitHub Repository"
           />
         </div>
@@ -613,7 +613,7 @@ const ShowcaseContent = () => {
       <footer className="app-footer">
         <p>
           Designed & Engineered by{' '}
-          <a href="https://github.com/abhidp" target="_blank" rel="noreferrer">
+          <a href="https://github.com/bhatnagar-built" target="_blank" rel="noreferrer">
             Abhishek Bhatnagar
           </a>
         </p>
