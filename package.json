@@ -18,7 +18,7 @@
       "import": "./dist/index.es.js",
       "require": "./dist/index.umd.js"
     },
-    "./style.css": "./dist/neumorphic-ui-react.css"
+    "./style.css": "./dist/ui-neumorphism.css"
   },
   "files": [
     "dist"
